@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Train Arrival</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbtron">
+      <div class="header">
+        <h1 class="text-center">Welcome to BART!</h1>
+        <h4 class="text-center">...because we don't really update our times either</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-md-9">
+        <table class="table well table-striped">
+          <thead>
+            <tr>
+              <th>Train Name</th>
+              <th>Destination</th>
+              <th>Frequency (min)</th>
+              <th>First Arrival</th>
+              <th>Minutes away</th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+          <tbody id="trainSchedules">
+
+          </tbody>
+        </table>
+      </div>
+
+
+      <div class="col-xs-12 col-md-3">        
+        <form>
+          <div class="form-group">
+            <label for="nameInput">Name</label>
+            <input type="text" class="form-control" id="nameInput" placeholder="Pittsburg/Baypoint">
+          </div>
+          <div class="form-group">
+            <label for="destinationInput">Destination</label>
+            <input type="text" class="form-control" id="destinationInput" placeholder="Powell">
+          </div>
+          <div class="form-group">
+            <label for="firstTimeInput">First Train Time (HH:mm - military time)</label>
+            <input type="text" class="form-control" id="startInput" placeholder="13:05">
+          </div>
+          <div class="form-group">
+            <label for="frequencyInput">Frequency (min)</label>
+            <input type="number" class="form-control" id="frequencyInput" placeholder="20">
+          </div>
+          <button type="submit" class="btn btn-primary" id="submitTrain">Submit</button>
+        </form>        
+      </div>
+    </div>
+  </div>
+  
+
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="firebase_logic.js"></script>
+
+
+</body>
+
+</html>
